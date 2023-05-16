@@ -1,0 +1,188 @@
+// тк мы к ним обращаемся везде ниже
+@import "fonts.scss";
+@import "utils/reset";
+@import "utils/vars";
+@import "vendors/vendors";
+
+$index: calc(1vw + 1vh);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #fff;
+  color: #000;
+}
+
+#twelve-months {
+  .twelve-months-title {
+    font-family: "BaskervilleCyrillic";
+    text-transform: uppercase;
+    color: #b19673;
+    font-size: 6.2vw;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: 100%;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-shadow: 0px 4px 14px #ffffff;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .section-page {
+    width: 100%;
+    aspect-ratio: 1.87;
+    .section-page__inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    &[data-page="0"] {
+      padding: calc($index * 2);
+      .section-page__inner {
+        background-image: url(../img/first-screen-bg.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+  }
+
+  .month-stone__img {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+      will-change: transform;
+    }
+    &:hover {
+      img {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35))
+          drop-shadow(0px 4px 20px rgba(177, 150, 115, 0.486));
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .month-stone {
+    pointer-events: all !important;
+    position: absolute;
+    // background-color: rgba(255, 0, 0, 0.301);
+    &[data-stone="1"] {
+      top: 5%;
+      right: 18%;
+      width: 8vw;
+      height: 8vw;
+      // width: calc($index * 5.4);
+      // height: calc($index * 5.4);
+    }
+
+    &[data-stone="2"] {
+      top: 19%;
+      right: 8%;
+      // width: calc($index * 6.36);
+      // height: calc($index * 6.36);
+      width: 9vw;
+      height: 9vw;
+    }
+
+    &[data-stone="3"] {
+      top: 43%;
+      right: 9%;
+      // width: calc($index * 7.27);
+      // height: calc($index * 7.27);
+      width: 11vw;
+      height: 11vw;
+    }
+
+    &[data-stone="4"] {
+      top: 66%;
+      right: 23%;
+      // width: calc($index * 8.17);
+      // height: calc($index * 8.17);
+      width: 12vw;
+      height: 12vw;
+    }
+
+    &[data-stone="5"] {
+      top: 75%;
+      right: 38.5%;
+      // width: calc($index * 8.17);
+      // height: calc($index * 8.17);
+      width: 12vw;
+      height: 12vw;
+    }
+
+    &[data-stone="6"] {
+      top: 79%;
+      left: 30%;
+      // width: calc($index * 7.27);
+      // height: calc($index * 7.27);
+      width: 10vw;
+      height: 10vw;
+    }
+
+    &[data-stone="7"] {
+      top: 75%;
+      left: 16.5%;
+      // width: calc($index * 6.36);
+      // height: calc($index * 6.36);
+      width: 9.5vw;
+      height: 9.5vw;
+    }
+
+    &[data-stone="8"] {
+      top: 57%;
+      left: 10%;
+      // width: calc($index * 5.45);
+      // height: calc($index * 5.45);
+      width: 8vw;
+      height: 8vw;
+    }
+
+    &[data-stone="9"] {
+      top: 32%;
+      left: 15.3%;
+      // width: calc($index * 4.54);
+      // height: calc($index * 4.54);
+      width: 6.6vw;
+      height: 6.6vw;
+    }
+
+    &[data-stone="10"] {
+      top: 16%;
+      left: 28.5%;
+      // width: calc($index * 3.64);
+      // height: calc($index * 3.64);
+      width: 5vw;
+      height: 5vw;
+    }
+
+    &[data-stone="11"] {
+      top: 7%;
+      left: 43.5%;
+      // width: calc($index * 3.64);
+      // height: calc($index * 3.64);
+      width: 5vw;
+      height: 5vw;
+    }
+
+    &[data-stone="12"] {
+      top: 0%;
+      right: 34%;
+      // width: calc($index * 4.54);
+      // height: calc($index * 4.54);
+      width: 7vw;
+      height: 7vw;
+    }
+  }
+}

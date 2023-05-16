@@ -1,115 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: "BaskervilleCyrillic";
-  font-display: swap;
-  src: url("../fonts/BaskervilleCyrillic.woff2") format("woff2"), url("../fonts/BaskervilleCyrillic.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-display: swap;
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-display: swap;
-  src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-
-/* Указываем box sizing */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Убираем внутренние отступы */
-
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Убираем внешние отступы */
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
-a {
-  display: block;
-  text-decoration: none;
-}
-
-/* Выставляем основные настройки по-умолчанию для body */
-
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Упрощаем работу с изображениями */
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Указываем понятную периодичность в потоке данных у article*/
-
-article > * + * {
-  margin-top: 1em;
-}
-
-/* Наследуем шрифты для инпутов и кнопок */
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
-
 [data-aos][data-aos][data-aos-duration="50"],
 body[data-aos-duration="50"] [data-aos] {
   transition-duration: 50ms;
@@ -1118,13 +1008,116 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-*,
-*:before,
-*:after {
+#twelve-months {
+  /* Указываем box sizing */
+  /* Убираем внутренние отступы */
+  /* Убираем внешние отступы */
+  /* Выставляем основные настройки по-умолчанию для body */
+  /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+  /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+  /* Упрощаем работу с изображениями */
+  /* Указываем понятную периодичность в потоке данных у article*/
+  /* Наследуем шрифты для инпутов и кнопок */
+  /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+}
+
+@font-face {
+  font-family: "BaskervilleCyrillic";
+  font-display: swap;
+  src: url("../fonts/BaskervilleCyrillic.woff2") format("woff2"), url("../fonts/BaskervilleCyrillic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+#twelve-months *,
+#twelve-months *::before,
+#twelve-months *::after {
   box-sizing: border-box;
 }
 
-*::selection {
+#twelve-months ul[class],
+#twelve-months ol[class] {
+  padding: 0;
+}
+
+#twelve-months body,
+#twelve-months h1,
+#twelve-months h2,
+#twelve-months h3,
+#twelve-months h4,
+#twelve-months h5,
+#twelve-months h6 p,
+#twelve-months ul[class],
+#twelve-months ol[class],
+#twelve-months li,
+#twelve-months figure,
+#twelve-months figcaption,
+#twelve-months blockquote,
+#twelve-months dl,
+#twelve-months dd {
+  margin: 0;
+}
+
+#twelve-months a {
+  display: block;
+  text-decoration: none;
+}
+
+#twelve-months body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+#twelve-months ul[class],
+#twelve-months ol[class] {
+  list-style: none;
+}
+
+#twelve-months a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+#twelve-months img {
+  max-width: 100%;
+  display: block;
+}
+
+#twelve-months article > * + * {
+  margin-top: 1em;
+}
+
+#twelve-months input,
+#twelve-months button,
+#twelve-months textarea,
+#twelve-months select {
+  font: inherit;
+}
+
+#twelve-months *,
+#twelve-months *:before,
+#twelve-months *:after {
+  box-sizing: border-box;
+}
+
+#twelve-months *::selection {
   background: #fff;
   color: #000;
 }
@@ -1274,15 +1267,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   right: 34%;
   width: 7vw;
   height: 7vw;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 @media screen {
@@ -1481,5 +1465,14 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   html:not(.no-js) [data-aos=flip-down].aos-animate {
     -webkit-transform: perspective(2500px) rotateX(0);
     transform: perspective(2500px) rotateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #twelve-months * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

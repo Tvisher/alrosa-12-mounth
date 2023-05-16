@@ -1,23 +1,23 @@
 // тк мы к ним обращаемся везде ниже
-@import "fonts.scss";
-@import "utils/reset";
-@import "utils/vars";
 @import "vendors/vendors";
-
-$index: calc(1vw + 1vh);
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-*::selection {
-  background: #fff;
-  color: #000;
-}
-
 #twelve-months {
+  @import "fonts.scss";
+  @import "utils/reset";
+  @import "utils/vars";
+
+  $index: calc(1vw + 1vh);
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  *::selection {
+    background: #fff;
+    color: #000;
+  }
+
   .twelve-months-title {
     font-family: "BaskervilleCyrillic";
     text-transform: uppercase;

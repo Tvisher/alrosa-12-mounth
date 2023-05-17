@@ -39,6 +39,7 @@
     overflow: hidden;
     width: 100%;
     aspect-ratio: 1.87;
+    position: relative;
     // height: 100vh;
     .section-page__inner {
       width: 100%;
@@ -200,11 +201,22 @@
   }
 
   .stone-descr {
+    &.dark {
+      .stone-descr__name {
+        color: #000;
+      }
+      .stone-descr__data {
+        color: #4f4f4f;
+      }
+      &:before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 11L0 0H11V11Z' fill='%234F4F4F'/%3e%3c/svg%3e ");
+      }
+    }
     position: absolute;
     color: #fff;
     font-family: "Roboto";
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     &:before {
       position: absolute;
       content: "";
@@ -219,13 +231,11 @@
       transform: translateX(-250%);
     }
     .stone-descr__name {
-      // font-size: calc($index * 0.45);
       font-size: 0.69vw;
       line-height: 135%;
     }
 
     .stone-descr__data {
-      // font-size: calc($index * 0.72);
       font-size: 1.1vw;
       margin-bottom: 0.34vw;
       line-height: 135%;
@@ -286,6 +296,7 @@
     pointer-events: all !important;
     &:hover {
       img {
+        transition-delay: 0.1s;
         transform: scale(1.1) translateZ(0);
       }
     }
@@ -296,6 +307,7 @@
     }
     img {
       transition: transform 0.3s ease-in-out;
+      transition-delay: 0s;
       will-change: transform;
       width: 100%;
       height: 100%;
@@ -376,6 +388,17 @@
       }
     }
   }
+
+  .section-page__image {
+    overflow: hidden;
+    img {
+      transition: filter 0.8s ease-in-out 0.2s;
+      filter: blur(8px);
+    }
+    &.aos-animate img {
+      filter: blur(0px);
+    }
+  }
   .section-page[data-page="2"] {
     .section-page__inner {
       padding: 7.2vw 6.94vw 4.2vw;
@@ -401,6 +424,7 @@
       right: 0;
       top: 9.45%;
       width: 64%;
+      height: 40vw;
       img {
         width: 100%;
         height: 100%;
@@ -424,4 +448,79 @@
       bottom: 20%;
     }
   }
+
+  .section-page[data-page="3"] {
+    .section-page__inner {
+      padding: 7.2vw 6.94vw 4.2vw;
+      z-index: 2;
+    }
+
+    .section-page__title {
+      position: absolute;
+      right: 10%;
+      top: 7%;
+    }
+    .section-page__text {
+      position: absolute;
+      right: 16.5%;
+      top: 23.5%;
+      width: fit-content;
+      font-family: "Roboto";
+      font-weight: 400;
+      margin-left: auto;
+      font-size: 1.38vw;
+      line-height: 150%;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+    }
+    .section-page__image {
+      position: absolute;
+      left: 0;
+      top: 0%;
+      width: calc(50% + 1px);
+      bottom: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .section-page__nameplate {
+      z-index: 2;
+      bottom: 0;
+      left: calc(10% + 1px);
+    }
+    .stone-image {
+      &[data-stone="1"] {
+        width: 18.5vw;
+        height: 16.4vw;
+        top: 5%;
+        left: 7.4%;
+      }
+
+      &[data-stone="2"] {
+        width: 21.2vw;
+        height: 18.8vw;
+        bottom: 5%;
+        left: 40%;
+      }
+    }
+    .stone-descr {
+      position: absolute;
+
+      &[data-descr="1"] {
+        left: 26.5%;
+        top: 10%;
+      }
+      &[data-descr="2"] {
+        right: 23.5%;
+        bottom: 18%;
+      }
+    }
+  }
+}
+
+.stone-image__wrapper {
+  transition-timing-function: ease-in-out;
 }

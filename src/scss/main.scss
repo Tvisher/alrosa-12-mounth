@@ -1,8 +1,8 @@
 // тк мы к ним обращаемся везде ниже
 @import "vendors/vendors";
+@import "utils/reset";
 #twelve-months {
   @import "fonts.scss";
-  @import "utils/reset";
   @import "utils/vars";
 
   $index: calc(1vw + 1vh);
@@ -44,13 +44,8 @@
       position: relative;
     }
     &[data-page="0"] {
-      padding: calc($index * 2);
-      .section-page__inner {
-        // background-image: url(../img/first-screen-bg.svg);
-        // background-repeat: no-repeat;
-        // background-size: contain;
-        // background-position: center;
-      }
+      // padding: calc($index * 2);
+      padding: 2.63vw;
       .section-page__inner-svg {
         position: absolute;
         left: 0;
@@ -197,6 +192,142 @@
       // height: calc($index * 4.54);
       width: 7vw;
       height: 7vw;
+    }
+  }
+
+  .stone-descr {
+    position: absolute;
+    color: #fff;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: calc($index * 0.5);
+      height: calc($index * 0.5);
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 11L0 0H11V11Z' fill='white'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translateX(-250%);
+    }
+    .stone-descr__name {
+      font-size: calc($index * 0.45);
+    }
+
+    .stone-descr__data {
+      font-size: calc($index * 0.72);
+    }
+  }
+
+  .section-pages {
+    position: relative;
+    .section-pages__line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: #c4c4c4;
+      z-index: 2;
+      &:nth-child(1) {
+        left: 5%;
+      }
+      &:nth-child(2) {
+        left: 27.5%;
+      }
+      &:nth-child(3) {
+        left: 50%;
+      }
+      &:nth-child(4) {
+        left: 72.5%;
+      }
+      &:nth-child(5) {
+        left: 95%;
+      }
+    }
+  }
+
+  .section-page__nameplate {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: calc($index * 0.72);
+    line-height: 150%;
+    padding: calc($index * 0.45) calc($index * 1.8);
+  }
+
+  .section-page[data-page="1"] {
+    position: relative;
+    .section-page__image {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .section-page__nameplate {
+      bottom: 0;
+      left: calc(5% + 1px);
+      z-index: 2;
+    }
+    .section-page__inner {
+      padding: 4.2vw 6.94vw;
+      z-index: 2;
+    }
+    .section-page__text {
+      display: flex;
+      flex-direction: column;
+      font-family: "BaskervilleCyrillic";
+      font-style: normal;
+      font-weight: 400;
+      font-size: calc($index * 1.6);
+      line-height: 112%;
+      color: #ffffff;
+      margin-bottom: 2vw;
+    }
+    .section-page__descr {
+      display: flex;
+      flex-direction: column;
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: calc($index * 0.6);
+      line-height: 150%;
+      color: #ffffff;
+    }
+    .stone-image {
+      position: absolute;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      &[data-stone="1"] {
+        width: 19vw;
+        height: 19vw;
+        right: 23%;
+        top: 9.5%;
+      }
+
+      &[data-stone="2"] {
+        width: 22vw;
+        height: 22vw;
+        right: 20%;
+        top: 57%;
+      }
+    }
+
+    .stone-descr {
+      &[data-descr="1"] {
+        right: 5.2%;
+        top: 17%;
+      }
     }
   }
 }

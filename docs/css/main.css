@@ -1008,18 +1008,91 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-#twelve-months {
-  /* Указываем box sizing */
-  /* Убираем внутренние отступы */
-  /* Убираем внешние отступы */
-  /* Выставляем основные настройки по-умолчанию для body */
-  /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-  /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-  /* Упрощаем работу с изображениями */
-  /* Указываем понятную периодичность в потоке данных у article*/
-  /* Наследуем шрифты для инпутов и кнопок */
-  /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 
 @font-face {
   font-family: "BaskervilleCyrillic";
@@ -1043,72 +1116,6 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
-}
-
-#twelve-months *,
-#twelve-months *::before,
-#twelve-months *::after {
-  box-sizing: border-box;
-}
-
-#twelve-months ul[class],
-#twelve-months ol[class] {
-  padding: 0;
-}
-
-#twelve-months body,
-#twelve-months h1,
-#twelve-months h2,
-#twelve-months h3,
-#twelve-months h4,
-#twelve-months h5,
-#twelve-months h6 p,
-#twelve-months ul[class],
-#twelve-months ol[class],
-#twelve-months li,
-#twelve-months figure,
-#twelve-months figcaption,
-#twelve-months blockquote,
-#twelve-months dl,
-#twelve-months dd {
-  margin: 0;
-}
-
-#twelve-months a {
-  display: block;
-  text-decoration: none;
-}
-
-#twelve-months body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-#twelve-months ul[class],
-#twelve-months ol[class] {
-  list-style: none;
-}
-
-#twelve-months a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-#twelve-months img {
-  max-width: 100%;
-  display: block;
-}
-
-#twelve-months article > * + * {
-  margin-top: 1em;
-}
-
-#twelve-months input,
-#twelve-months button,
-#twelve-months textarea,
-#twelve-months select {
-  font: inherit;
 }
 
 #twelve-months *,
@@ -1152,7 +1159,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 #twelve-months .section-page[data-page="0"] {
-  padding: calc((1vw + 1vh) * 2);
+  padding: 2.63vw;
 }
 
 #twelve-months .section-page[data-page="0"] .section-page__inner-svg {
@@ -1276,6 +1283,155 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   right: 34%;
   width: 7vw;
   height: 7vw;
+}
+
+#twelve-months .stone-descr {
+  position: absolute;
+  color: #fff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 135%;
+}
+
+#twelve-months .stone-descr:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: calc((1vw + 1vh) * 0.5);
+  height: calc((1vw + 1vh) * 0.5);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='11' viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11 11L0 0H11V11Z' fill='white'/%3e%3c/svg%3e ");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: translateX(-250%);
+}
+
+#twelve-months .stone-descr .stone-descr__name {
+  font-size: calc((1vw + 1vh) * 0.45);
+}
+
+#twelve-months .stone-descr .stone-descr__data {
+  font-size: calc((1vw + 1vh) * 0.72);
+}
+
+#twelve-months .section-pages {
+  position: relative;
+}
+
+#twelve-months .section-pages .section-pages__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #c4c4c4;
+  z-index: 2;
+}
+
+#twelve-months .section-pages .section-pages__line:nth-child(1) {
+  left: 5%;
+}
+
+#twelve-months .section-pages .section-pages__line:nth-child(2) {
+  left: 27.5%;
+}
+
+#twelve-months .section-pages .section-pages__line:nth-child(3) {
+  left: 50%;
+}
+
+#twelve-months .section-pages .section-pages__line:nth-child(4) {
+  left: 72.5%;
+}
+
+#twelve-months .section-pages .section-pages__line:nth-child(5) {
+  left: 95%;
+}
+
+#twelve-months .section-page__nameplate {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: calc((1vw + 1vh) * 0.72);
+  line-height: 150%;
+  padding: calc((1vw + 1vh) * 0.45) calc((1vw + 1vh) * 1.8);
+}
+
+#twelve-months .section-page[data-page="1"] {
+  position: relative;
+}
+
+#twelve-months .section-page[data-page="1"] .section-page__image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#twelve-months .section-page[data-page="1"] .section-page__nameplate {
+  bottom: 0;
+  left: calc(5% + 1px);
+  z-index: 2;
+}
+
+#twelve-months .section-page[data-page="1"] .section-page__inner {
+  padding: 4.2vw 6.94vw;
+  z-index: 2;
+}
+
+#twelve-months .section-page[data-page="1"] .section-page__text {
+  display: flex;
+  flex-direction: column;
+  font-family: "BaskervilleCyrillic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc((1vw + 1vh) * 1.6);
+  line-height: 112%;
+  color: #ffffff;
+  margin-bottom: 2vw;
+}
+
+#twelve-months .section-page[data-page="1"] .section-page__descr {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: calc((1vw + 1vh) * 0.6);
+  line-height: 150%;
+  color: #ffffff;
+}
+
+#twelve-months .section-page[data-page="1"] .stone-image {
+  position: absolute;
+}
+
+#twelve-months .section-page[data-page="1"] .stone-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#twelve-months .section-page[data-page="1"] .stone-image[data-stone="1"] {
+  width: 19vw;
+  height: 19vw;
+  right: 23%;
+  top: 9.5%;
+}
+
+#twelve-months .section-page[data-page="1"] .stone-image[data-stone="2"] {
+  width: 22vw;
+  height: 22vw;
+  right: 20%;
+  top: 57%;
+}
+
+#twelve-months .section-page[data-page="1"] .stone-descr[data-descr="1"] {
+  right: 5.2%;
+  top: 17%;
 }
 
 @media screen {
@@ -1478,7 +1634,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #twelve-months * {
+  * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

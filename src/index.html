@@ -217,24 +217,24 @@
                         в снежки и снеговик. 1937</div>
                 </div>
                 <div class="section-page__inner">
-                    <div class="section-page__title">Январь</div>
+                    <div class="section-page__title" data-aos="fade-right">Январь</div>
                     <div class="section-page__text">
-                        <span> «Буря, старшая сестра,</span>
-                        <span> Ты раздуй огонь костра.</span>
-                        <span> Стужа, средняя сестра,</span>
-                        <span> Скуй котел из серебра –</span>
-                        <span> Соки вешние варить,</span>
-                        <span> Смолы летние курить...</span>
+                        <span data-aos="fade-right">«Буря, старшая сестра,</span>
+                        <span data-aos="fade-right">Ты раздуй огонь костра.</span>
+                        <span data-aos="fade-right">Стужа, средняя сестра,</span>
+                        <span data-aos="fade-right">Скуй котел из серебра –</span>
+                        <span data-aos="fade-right">Соки вешние варить,</span>
+                        <span data-aos="fade-right">Смолы летние курить...</span>
 
                     </div>
                     <div class="section-page__text">
-                        <span>А последнюю – зову</span>
-                        <span>Метелицу-куреву.</span>
-                        <span>Метелица-курева</span>
-                        <span> Закурила, замела,</span>
-                        <span> Запылила,завалила</span>
-                        <span>Все дорожки, все пути –</span>
-                        <span>Ни проехать, ни пройти!»</span>
+                        <span data-aos="fade-right">А последнюю – зову</span>
+                        <span data-aos="fade-right">Метелицу-куреву.</span>
+                        <span data-aos="fade-right">Метелица-курева</span>
+                        <span data-aos="fade-right">Закурила, замела,</span>
+                        <span data-aos="fade-right">Запылила,завалила</span>
+                        <span data-aos="fade-right">Все дорожки, все пути –</span>
+                        <span data-aos="fade-right">Ни проехать, ни пройти!»</span>
                     </div>
 
                     <div class="stone-image" data-stone="1" data-id="fixed-bal-block">
@@ -244,7 +244,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="stone-descr" data-descr="1" data-aos="fade-left" data-aos-delay="300">
+                    <div class="stone-descr" data-descr="1" data-aos="fade-left" data-aos-delay="200"
+                        data-aos-duration="1400">
                         <div class="stone-descr__name">Масса:</div>
                         <div class="stone-descr__data">10,99 карата</div>
 
@@ -272,7 +273,7 @@
 </main>
 @@include('./html/footer.html')
 <script>
-    // const paralaxElems = document.querySelectorAll('[data-id="fixed-bal-block"]');
+    const paralaxElems = document.querySelectorAll('[data-id="fixed-bal-block"]');
     if (paralaxElems?.length > 0) {
         paralaxElems.forEach(elem => {
             var parallaxInstance = new Parallax(elem, {

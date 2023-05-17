@@ -1150,7 +1150,7 @@ select {
 #twelve-months .section-page {
   overflow: hidden;
   width: 100%;
-  height: 100vh;
+  aspect-ratio: 1.87;
 }
 
 #twelve-months .section-page .section-page__inner {
@@ -1160,6 +1160,8 @@ select {
 }
 
 #twelve-months .section-page[data-page="0"] {
+  aspect-ratio: inherit;
+  height: 100vh;
   padding: 2.63vw;
 }
 
@@ -1292,7 +1294,6 @@ select {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  line-height: 135%;
 }
 
 #twelve-months .stone-descr:before {
@@ -1310,12 +1311,14 @@ select {
 }
 
 #twelve-months .stone-descr .stone-descr__name {
-  font-size: calc((1vw + 1vh) * 0.45);
+  font-size: 0.69vw;
+  line-height: 135%;
 }
 
 #twelve-months .stone-descr .stone-descr__data {
-  font-size: calc((1vw + 1vh) * 0.72);
-  margin-bottom: calc((1vw + 1vh) * 0.22);
+  font-size: 1.1vw;
+  margin-bottom: 0.34vw;
+  line-height: 135%;
 }
 
 #twelve-months .section-pages {
@@ -1357,15 +1360,15 @@ select {
   color: #fff;
   font-family: "Roboto";
   font-weight: 400;
-  font-size: calc((1vw + 1vh) * 0.72);
+  font-size: 1.11vw;
   line-height: 150%;
-  padding: calc((1vw + 1vh) * 0.45) calc((1vw + 1vh) * 1.8);
+  padding: 0.69vw 2.77vw;
 }
 
 #twelve-months .section-page__title {
   font-family: "BaskervilleCyrillic";
   font-weight: 400;
-  font-size: calc((1vw + 1vh) * 3.63);
+  font-size: 5.5vw;
   line-height: 120%;
   text-align: center;
   text-transform: uppercase;
@@ -1421,7 +1424,7 @@ select {
 }
 
 #twelve-months .section-page[data-page="1"] .section-page__inner {
-  padding: 4.2vw 6.94vw;
+  padding: 4.2vw 6.94vw 0;
   z-index: 2;
 }
 
@@ -1431,7 +1434,7 @@ select {
   font-family: "BaskervilleCyrillic";
   font-style: normal;
   font-weight: 400;
-  font-size: calc((1vw + 1vh) * 1.6);
+  font-size: 2.43vw;
   line-height: 112%;
   color: #ffffff;
   margin-bottom: 2vw;
@@ -1442,7 +1445,7 @@ select {
   flex-direction: column;
   font-family: "Roboto";
   font-weight: 400;
-  font-size: calc((1vw + 1vh) * 0.6);
+  font-size: 0.9vw;
   line-height: 150%;
   color: #ffffff;
 }
@@ -1483,7 +1486,7 @@ select {
 #twelve-months .section-page[data-page="2"] .section-page__text {
   font-family: "Roboto";
   font-weight: 400;
-  font-size: calc((1vw + 1vh) * 0.9);
+  font-size: 1.38vw;
   line-height: 150%;
   color: #000000;
   display: flex;

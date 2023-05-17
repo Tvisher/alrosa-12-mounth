@@ -36,6 +36,7 @@
     width: 100%;
   }
   .section-page {
+    overflow: hidden;
     width: 100%;
     aspect-ratio: 1.87;
     .section-page__inner {
@@ -302,11 +303,20 @@
       color: #ffffff;
     }
     .stone-image {
+      pointer-events: all !important;
+      &:hover {
+        img {
+          transform: scale(1.1) translateZ(0);
+        }
+      }
       position: absolute;
       img {
+        transition: transform 0.3s ease-in-out;
+        will-change: transform;
         width: 100%;
         height: 100%;
         object-fit: contain;
+        filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
       }
       &[data-stone="1"] {
         width: 19vw;
@@ -327,6 +337,10 @@
       &[data-descr="1"] {
         right: 5.2%;
         top: 17%;
+      }
+      &[data-descr="2"] {
+        right: 5.2%;
+        top: 60.1%;
       }
     }
   }

@@ -1148,6 +1148,7 @@ select {
 }
 
 #twelve-months .section-page {
+  overflow: hidden;
   width: 100%;
   aspect-ratio: 1.87;
 }
@@ -1406,13 +1407,21 @@ select {
 }
 
 #twelve-months .section-page[data-page="1"] .stone-image {
+  pointer-events: all !important;
   position: absolute;
 }
 
+#twelve-months .section-page[data-page="1"] .stone-image:hover img {
+  transform: scale(1.1) translateZ(0);
+}
+
 #twelve-months .section-page[data-page="1"] .stone-image img {
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
 }
 
 #twelve-months .section-page[data-page="1"] .stone-image[data-stone="1"] {
@@ -1432,6 +1441,11 @@ select {
 #twelve-months .section-page[data-page="1"] .stone-descr[data-descr="1"] {
   right: 5.2%;
   top: 17%;
+}
+
+#twelve-months .section-page[data-page="1"] .stone-descr[data-descr="2"] {
+  right: 5.2%;
+  top: 60.1%;
 }
 
 @media screen {

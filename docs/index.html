@@ -142,8 +142,7 @@
             <div class="section-page" data-page="1">
                 <div class="section-page__image">
                     <img src="./img/second-screen-image.jpg" alt="">
-                    <div class="section-page__nameplate" data-aos="fade-in" data-aos-delay="400"
-                        data-aos-duration="1600">Вальтер Палмер.
+                    <div class="section-page__nameplate" data-aos="fade-in" data-aos-delay="300">Вальтер Палмер.
                         Солнечный Делл. 1927</div>
                 </div>
                 <div class="section-page__inner">
@@ -224,7 +223,52 @@
                     </div>
                 </div>
             </div>
-            <div class="section-page" data-page="2"></div>
+            <div class="section-page" data-page="2">
+                <div class="section-page__image">
+                    <img src="./img/january-painting.jpg" alt="">
+                    <div class="section-page__nameplate" data-aos="fade-in" data-aos-delay="300">Ханс Даль. Игра
+                        в снежки и снеговик. 1937</div>
+                </div>
+                <div class="section-page__inner">
+                    <div class="section-page__title">Январь</div>
+                    <div class="section-page__text">
+                        <span> «Буря, старшая сестра,</span>
+                        <span> Ты раздуй огонь костра.</span>
+                        <span> Стужа, средняя сестра,</span>
+                        <span> Скуй котел из серебра –</span>
+                        <span> Соки вешние варить,</span>
+                        <span> Смолы летние курить...</span>
+
+                    </div>
+                    <div class="section-page__text">
+                        <span>А последнюю – зову</span>
+                        <span>Метелицу-куреву.</span>
+                        <span>Метелица-курева</span>
+                        <span> Закурила, замела,</span>
+                        <span> Запылила,завалила</span>
+                        <span>Все дорожки, все пути –</span>
+                        <span>Ни проехать, ни пройти!»</span>
+                    </div>
+
+                    <div class="stone-image" data-stone="1" data-id="fixed-bal-block">
+                        <div class="stone-image__wrapper" data-depth="0.07">
+                            <div class="stone-image__container" data-aos="zoom-in" data-aos-duration="1400">
+                                <img src="./img/january-stone.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stone-descr" data-descr="1" data-aos="fade-left" data-aos-delay="300">
+                        <div class="stone-descr__name">Масса:</div>
+                        <div class="stone-descr__data">10,99 карата</div>
+
+                        <div class="stone-descr__name">Где добыто:</div>
+                        <div class="stone-descr__data">Архангельская область</div>
+
+                        <div class="stone-descr__name">Когда:</div>
+                        <div class="stone-descr__data">2021</div>
+                    </div>
+                </div>
+            </div>
             <div class="section-page" data-page="3"></div>
             <div class="section-page" data-page="4"></div>
             <div class="section-page" data-page="5"></div>
@@ -248,8 +292,8 @@
 
 </html>
 <script>
-    const paralaxElems = document.querySelectorAll('[data-id="fixed-bal-block"]');
-    if (paralaxElems.length > 0) {
+    // const paralaxElems = document.querySelectorAll('[data-id="fixed-bal-block"]');
+    if (paralaxElems?.length > 0) {
         paralaxElems.forEach(elem => {
             var parallaxInstance = new Parallax(elem, {
                 relativeInput: true

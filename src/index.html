@@ -493,7 +493,7 @@
                     </div>
 
                     <div class="stone-image" data-stone="1" data-id="fixed-bal-block">
-                        <div class="stone-image__wrapper" data-depth="-0.07">
+                        <div class="stone-image__wrapper" data-depth="0.07">
                             <div class="stone-image__container" data-aos="zoom-in" data-aos-duration="1400">
                                 <img src="./img/july-stone.png" alt="">
                             </div>
@@ -513,7 +513,46 @@
 
                 </div>
             </div>
-            <div class="section-page" data-page="9"></div>
+            <div class="section-page" data-page="9">
+                <div class="section-page__image" data-aos>
+                    <img src="./img/august-painting.jpg" alt="">
+                    <div class="section-page__nameplate" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
+                        Зинаида Серебрякова. Осень. 1910</div>
+                </div>
+                <div class="section-page__inner">
+                    <div class="section-page__title" data-aos="fade-right">Август</div>
+                    <div class="section-page__text">
+                        <span data-aos="fade-right">«Собираем в августе</span>
+                        <span data-aos="fade-right">Урожай плодов.</span>
+                        <span data-aos="fade-right">Много людям радости</span>
+                        <span data-aos="fade-right">После всех трудов.</span>
+                        <span data-aos="fade-right">Солнце над просторными</span>
+                        <span data-aos="fade-right">Нивами стоит.</span>
+                        <span data-aos="fade-right">И подсолнух зернами</span>
+                        <span data-aos="fade-right">Черными набит».</span>
+                    </div>
+
+                    <div class="stone-image" data-stone="1" data-id="fixed-bal-block">
+                        <div class="stone-image__wrapper" data-depth="-0.07">
+                            <div class="stone-image__container" data-aos="zoom-in" data-aos-duration="1400">
+                                <img src="./img/august-stone.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stone-descr dark" data-descr="1" data-aos="fade-left" data-aos-delay="200"
+                        data-aos-duration="1400">
+                        <div class="stone-descr__name">Масса:</div>
+                        <div class="stone-descr__data">11,01 карата</div>
+
+                        <div class="stone-descr__name">Где добыто:</div>
+                        <div class="stone-descr__data">Архангельская область</div>
+
+                        <div class="stone-descr__name">Когда:</div>
+                        <div class="stone-descr__data">2020</div>
+                    </div>
+
+                </div>
+            </div>
             <div class="section-page" data-page="10"></div>
             <div class="section-page" data-page="11"></div>
             <div class="section-page" data-page="12"></div>
@@ -527,7 +566,7 @@
     if (paralaxElems?.length > 0) {
         paralaxElems.forEach(elem => {
             var parallaxInstance = new Parallax(elem, {
-                relativeInput: true
+                relativeInput: true,
             });
         });
     }

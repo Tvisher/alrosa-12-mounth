@@ -16,9 +16,23 @@ html {
     box-sizing: border-box;
   }
 
-  *::selection {
-    background: #fff;
-    color: #000;
+  &.ratio {
+    .section-page {
+      aspect-ratio: 1.87 !important;
+      height: inherit !important;
+    }
+    .section-page[data-page="1"] {
+      .section-page__text {
+        font-size: 2.43vw;
+      }
+      .section-page__descr {
+        font-size: 0.9vw;
+      }
+    }
+
+    .section-page[data-page="13"] {
+      aspect-ratio: 1.5 !important;
+    }
   }
 
   .twelve-months-title {
@@ -397,10 +411,6 @@ html {
       filter: blur(0px);
     }
   }
-  // .section-footer {
-  //   height: 10vw;
-  // }
-
   .to-top-btn {
     cursor: pointer;
     z-index: 2;

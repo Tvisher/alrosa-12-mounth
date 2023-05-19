@@ -12,7 +12,7 @@ window.addEventListener('load', (e) => {
         offset: 30, // offset (in px) from the original trigger point
         delay: 0, // values from 0 to 3000, with step 50ms
         duration: 1200, // values from 0 to 3000, with step 50ms
-        easing: 'ease', // default easing for AOS animations
+        easing: 'ease-in-out', // default easing for AOS animations
         once: false, // whether animation should happen only once - while scrolling down
         mirror: true, // whether elements should animate out while scrolling past them
         anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
@@ -34,4 +34,13 @@ window.addEventListener('scroll', (e) => {
     const triggerPosition = triggerSection.getBoundingClientRect().top;
     triggerPosition < 0 ? toTopBtn.classList.add('show') : toTopBtn.classList.remove('show')
 
-})
+});
+
+
+const checkRatio = (e) => {
+    const appCont = document.querySelector('#twelve-months');
+    (window.innerWidth / window.innerHeight) > 1.5 ? appCont.classList.remove('ratio') : appCont.classList.add('ratio');
+    console.log(window.innerWidth / window.innerHeight);
+}
+checkRatio();
+window.addEventListener('resize', checkRatio);

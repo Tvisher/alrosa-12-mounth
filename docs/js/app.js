@@ -20,3 +20,20 @@ window.addEventListener('load', (e) => {
         anchorPlacement: 'top-center', // defines which position of the element regarding to window should trigger the animation
     });
 });
+
+const triggerSection = document.querySelector('.section-page[data-page="1"]');
+const toTopBtn = document.querySelector('#to-top-btn');
+
+toTopBtn.onclick = (e) => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+}
+
+window.addEventListener('scroll', (e) => {
+    const triggerPosition = triggerSection.getBoundingClientRect().top;
+    triggerPosition < 0 ? toTopBtn.classList.add('show') : toTopBtn.classList.remove('show')
+
+})

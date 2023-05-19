@@ -1312,5 +1312,20 @@ html {
     .section-page[data-page="13"] .section-page__text {
       right: 19.5%;
     }
+
+    .section-page[data-page="4"] .stone-descr[data-descr="1"] {
+      right: 8%;
+      top: 55%;
+    }
+
+    .section-page[data-page="11"] .stone-image[data-stone="1"] {
+      top: 68%;
+    }
+    .section-page[data-page="11"] .stone-image[data-stone="2"] {
+      top: 58.5%;
+    }
+    .section-page[data-page="11"] .stone-image[data-stone="3"] {
+      top: 69%;
+    }
   }
 }

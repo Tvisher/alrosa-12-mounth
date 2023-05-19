@@ -995,9 +995,9 @@ html {
     }
     .section-page__text_d {
       position: absolute;
-      right: 14.7%;
-      top: 60%;
-      width: fit-content;
+      left: 0%;
+      bottom: -20%;
+      white-space: nowrap;
       font-family: "Roboto";
       font-weight: 400;
       font-size: 0.83vw;
@@ -1067,8 +1067,8 @@ html {
     }
     .section-page__text_d {
       position: absolute;
-      left: 6.9%;
-      top: 62%;
+      left: 0%;
+      bottom: -40%;
       width: fit-content;
       font-family: "Roboto";
       font-weight: 400;
@@ -1285,6 +1285,32 @@ html {
   @media (max-width: 992px) {
     .section-page[data-page="7"] .stone-descr[data-descr="1"] {
       top: 52%;
+    }
+    .section-page[data-page="2"],
+    .section-page[data-page="3"],
+    .section-page[data-page="4"],
+    .section-page[data-page="5"],
+    .section-page[data-page="7"],
+    .section-page[data-page="9"],
+    .section-page[data-page="13"] {
+      .section-page__text {
+        font-size: 1.2vw;
+      }
+    }
+
+    .section-page[data-page="3"] .section-page__text {
+      right: 17.5%;
+    }
+    .section-page[data-page="7"] .section-page__text {
+      right: 13.5%;
+    }
+
+    .section-page[data-page="9"] .section-page__text {
+      right: 21%;
+    }
+
+    .section-page[data-page="13"] .section-page__text {
+      right: 19.5%;
     }
   }
 }

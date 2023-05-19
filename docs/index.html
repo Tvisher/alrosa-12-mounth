@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12 МЕСЯЦЕВ</title>
-    <link rel="stylesheet" href="./css/main.css?_v=20230519115336">
+    <link rel="stylesheet" href="./css/main.css?_v=20230519123549">
     <script> </script>
 </head>
 
@@ -787,19 +787,22 @@
 </main>
 <footer> </footer>
 </body>
-<script src="./js/aos.js?_v=20230519115336"></script>
-<script src="./js/parallax.min.js?_v=20230519115336"></script>
-<script src="./js/TweenMax.min.js?_v=20230519115336"></script>
-<script src="./js/SmoothScroll.min.js?_v=20230519115336"></script>
-<script src="./js/app.js?_v=20230519115336"></script>
+<script src="./js/aos.js?_v=20230519123549"></script>
+<script src="./js/parallax.min.js?_v=20230519123549"></script>
+<script src="./js/TweenMax.min.js?_v=20230519123549"></script>
+<script src="./js/SmoothScroll.min.js?_v=20230519123549"></script>
+<script src="./js/app.js?_v=20230519123549"></script>
 
 </html>
 <script>
     const paralaxElems = document.querySelectorAll('[data-id="fixed-bal-block"]');
     if (paralaxElems?.length > 0) {
         paralaxElems.forEach(elem => {
+            const zonePlace = elem.closest('.section-page');
             var parallaxInstance = new Parallax(elem, {
                 relativeInput: true,
+                hoverOnly: true,
+                inputElement: zonePlace
             });
         });
     }

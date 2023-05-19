@@ -777,8 +777,11 @@
     const paralaxElems = document.querySelectorAll('[data-id="fixed-bal-block"]');
     if (paralaxElems?.length > 0) {
         paralaxElems.forEach(elem => {
+            const zonePlace = elem.closest('.section-page');
             var parallaxInstance = new Parallax(elem, {
                 relativeInput: true,
+                hoverOnly: true,
+                inputElement: zonePlace
             });
         });
     }

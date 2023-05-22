@@ -18,8 +18,8 @@ html {
 
   &.ratio {
     .section-page {
-      aspect-ratio: 1.87 !important;
-      height: inherit !important;
+      // aspect-ratio: 1.87 !important;
+      height: 53.4vw !important;
     }
     .section-page[data-page="1"] {
       .section-page__text {
@@ -31,7 +31,11 @@ html {
     }
 
     .section-page[data-page="13"] {
-      aspect-ratio: 1.5 !important;
+      height: 70vw !important;
+      padding-bottom: 10vw;
+      .section-page__image {
+        bottom: 10vw;
+      }
     }
   }
 

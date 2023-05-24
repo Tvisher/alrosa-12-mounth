@@ -40,7 +40,6 @@ window.addEventListener('scroll', (e) => {
 const checkRatio = (e) => {
     const appCont = document.querySelector('#twelve-months');
     (window.innerWidth / window.innerHeight) > 1.5 ? appCont.classList.remove('ratio') : appCont.classList.add('ratio');
-    console.log(window.innerWidth / window.innerHeight);
 }
 checkRatio();
 window.addEventListener('resize', checkRatio);

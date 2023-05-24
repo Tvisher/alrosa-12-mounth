@@ -464,7 +464,11 @@ html {
       left: calc(5% + 1px);
       z-index: 2;
       &._v2 {
-        bottom: 9%;
+        bottom: 0%;
+        left: inherit;
+        right: 0;
+        background: none;
+        font-style: italic;
       }
     }
     .section-page__inner {
